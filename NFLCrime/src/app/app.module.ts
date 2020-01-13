@@ -16,13 +16,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
 import {MatNativeDateModule, MatDatepickerModule,MatFormFieldModule,MatInputModule } from "@angular/material";
+import { FormsModule } from '@angular/forms';
+import { SmallerPipe } from './pipes/smaller.pipe';
+import { BiggerPipe } from './pipes/bigger.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopCrimesComponent,
     TopPlayersComponent,
-    TopTeamsComponent
+    TopTeamsComponent,
+    SmallerPipe,
+    BiggerPipe
   ],
   imports: [
     BrowserModule,
@@ -36,6 +41,7 @@ import {MatNativeDateModule, MatDatepickerModule,MatFormFieldModule,MatInputModu
     MatNativeDateModule,
     MatInputModule, 
     MatSelectModule,
+    FormsModule,
     MatFormFieldModule
   ],
   providers: [

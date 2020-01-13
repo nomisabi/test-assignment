@@ -13,8 +13,15 @@
 
 
 
+  <div style="height: 50px;">Filter by number of arrest is bigger than:
+    <input name="filterbigger" [(ngModel)]="bigger" (keyup.enter)="filterBigger()" type="number">
+  </div>
+
+  <div style="height: 50px;">Filter by number of arrest is smaller than:
+    <input name="filtersmaller" [(ngModel)]="smaller" (keyup.enter)="filterSmaller()" type="number">
+  </div>
   <div></div>
-  <div></div>
+  
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   
     <!-- Name Column -->

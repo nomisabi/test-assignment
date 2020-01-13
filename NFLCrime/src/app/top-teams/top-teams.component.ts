@@ -11,10 +11,14 @@ import { TopCrimesService } from '../services/top-crimes.service';
 })
 export class TopTeamsComponent implements OnInit {
 
-  selected={}
+  selected:any={}
   crimes:Crime[]=[]
   displayedColumns: string[] = ['Team', 'Team_name', 'Team_city', 'arrest_count'];
   dataSource:Team[] = [];
+  smaller=null;
+  bigger=null;
+  // mode 0=no filer, mode= 1 bigger, mode 2= smaller, mode3 = both
+  mode=0
 
   constructor(private teamService:TopTeamsForCrimeService,
     private crimeService:TopCrimesService) { }
@@ -34,4 +38,34 @@ export class TopTeamsComponent implements OnInit {
       res=> this.dataSource=res
     )
   }
+
+  filterBigger(){
+    if (this.bigger==null){
+      if (this.smaller!=null)
+        this.mode=2
+      else 
+        this.mode=0
+    }
+    else{
+      if (this.smaller!=null)
+        this.mode=3
+      else
+        this.mode=1 
+    }
+  }
+
+  filterSmaller(){
+    console.log(this.smaller)
+    if (this.smaller==null){
+      if (this.bigger!=null)
+        this.mode=1
+      else
+        this.mode=0
+    } else {
+      if (this.bigger!=null)
+        this.mode=3
+      else
+        this.mode=2 
+      }
+    }
 }
