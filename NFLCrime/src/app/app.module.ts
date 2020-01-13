@@ -5,9 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopCrimesService } from './top-crimes.service';
-import { TopPlayersForCrimeService } from './top-players-for-crime.service';
-import { TopTeamsForCrimeService } from './top-teams-for-crime.service';
+import { TopCrimesService } from './services/top-crimes.service';
+import { TopPlayersForCrimeService } from './services/top-players-for-crime.service';
+import { TopTeamsForCrimeService } from './services/top-teams-for-crime.service';
 
 @NgModule({
   declarations: [
