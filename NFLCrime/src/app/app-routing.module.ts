@@ -6,6 +6,7 @@ import { TopPlayersComponent } from './top-players/top-players.component';
 import { TopTeamsForCrimeService } from './services/top-teams-for-crime.service';
 import { TopTeamsComponent } from './top-teams/top-teams.component';
 import { CrimeTimeLineComponent } from './crime-time-line/crime-time-line.component';
+import { DatePickerComponent } from './date-picker/date-picker.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'players', component:TopPlayersComponent},
   {path:'teams', component:TopTeamsComponent},
   {path:'timeline', component:CrimeTimeLineComponent},
+  {path:'datepicker', component:DatePickerComponent},
   {path:'**', redirectTo:'crimes'},
 ];
 

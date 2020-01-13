@@ -35,3 +35,8 @@ Step 5 - Visualize Crime Timeline
 I installed chart.js. Then created a serviced with a function getting the timeline for a crime. 
 After I generated a component, where first you have to select the crime, then it shows the chart. 
 I used line chart for it.
+
+ Step 6 - Make a global date picker component for period of interest
+
+ I created a component, where I can set start and end dates with Material Date Picker. 
+ I created a service where I can follow the changes. I subscribed in Top Crimes, but did not finished.

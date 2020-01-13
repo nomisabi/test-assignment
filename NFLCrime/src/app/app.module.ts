@@ -21,6 +21,8 @@ import { SmallerPipe } from './pipes/smaller.pipe';
 import { BiggerPipe } from './pipes/bigger.pipe';
 import { CrimeTimeLineComponent } from './crime-time-line/crime-time-line.component';
 import { CrimeTimeLineService } from './services/crime-time-line.service';
+import { DatePickerComponent } from './date-picker/date-picker.component';
+import { DatePickerService } from './services/date-picker.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { CrimeTimeLineService } from './services/crime-time-line.service';
     TopTeamsComponent,
     SmallerPipe,
     BiggerPipe,
-    CrimeTimeLineComponent
+    CrimeTimeLineComponent,
+    DatePickerComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import { CrimeTimeLineService } from './services/crime-time-line.service';
     MatDatepickerModule,
     TopPlayersForCrimeService,
     TopTeamsForCrimeService,
-    CrimeTimeLineService
+    CrimeTimeLineService,
+    DatePickerService
   ],
   bootstrap: [AppComponent]
 })

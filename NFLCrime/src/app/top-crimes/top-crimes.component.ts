@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Crime } from '../model/crime';
 import { TopCrimesService } from '../services/top-crimes.service';
+import { Subscription } from 'rxjs';
+import { DatePickerService } from '../services/date-picker.service';
+import { DatePicked } from '../model/datePicked';
 
 @Component({
   selector: 'app-top-crimes',
@@ -8,7 +11,8 @@ import { TopCrimesService } from '../services/top-crimes.service';
   styleUrls: ['./top-crimes.component.css']
 })
 export class TopCrimesComponent implements OnInit {
-
+  dates: DatePicked;
+  subscription: Subscription;
   displayedColumns: string[] = ['Category', 'arrest_count'];
   dataSource:Crime[] = [];
   smaller=null;
@@ -16,7 +20,12 @@ export class TopCrimesComponent implements OnInit {
   // mode 0=no filer, mode= 1 bigger, mode 2= smaller, mode3 = both
   mode=0;
 
-  constructor(private crimeService:TopCrimesService) { }
+  constructor(private crimeService:TopCrimesService,
+    private datePickerService: DatePickerService) { 
+      this.subscription= this.datePickerService.getDates().subscribe(dates => {
+        console.log(JSON.stringify(dates))
+        this.dates = dates; });
+    }
 
   ngOnInit() {
     // getting the crimes
@@ -54,5 +63,10 @@ export class TopCrimesComponent implements OnInit {
         this.mode=2 
       }
     }
+
+    ngOnDestroy() {
+      // unsubscribe to ensure no memory leaks
+      this.subscription.unsubscribe();
+  }
 
 }
