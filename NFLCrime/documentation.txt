@@ -1,0 +1,19 @@
+Steps:
+
+0. Create a GitHUB repository for solution
+
+Created GitHub repository: https://github.com/nomisabi/test-assignment
+
+1. Setup a new Angular site
+
+I cloned GitHUB repository and created a new Angular project with NFLCrime title. 
+Versions:
+Angular CLI: 8.3.22
+Node: 13.6.0
+OS: darwin x64
+Angular: 8.2.14
+
+2. Add external data services
+
+I created the services, added an error hadling function and a function to get values with Http requests.
+
