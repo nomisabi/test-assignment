@@ -37,6 +37,9 @@ export class TopTeamsComponent implements OnInit {
     this.teamService.getTopTeamsForCrime(this.selected.Category).then(
       res=> this.dataSource=res
     )
+
+    this.smaller=null;
+    this.bigger=null;
   }
 
   filterBigger(){

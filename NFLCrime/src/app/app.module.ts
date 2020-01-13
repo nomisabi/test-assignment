@@ -19,6 +19,8 @@ import {MatNativeDateModule, MatDatepickerModule,MatFormFieldModule,MatInputModu
 import { FormsModule } from '@angular/forms';
 import { SmallerPipe } from './pipes/smaller.pipe';
 import { BiggerPipe } from './pipes/bigger.pipe';
+import { CrimeTimeLineComponent } from './crime-time-line/crime-time-line.component';
+import { CrimeTimeLineService } from './services/crime-time-line.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { BiggerPipe } from './pipes/bigger.pipe';
     TopPlayersComponent,
     TopTeamsComponent,
     SmallerPipe,
-    BiggerPipe
+    BiggerPipe,
+    CrimeTimeLineComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { BiggerPipe } from './pipes/bigger.pipe';
     TopCrimesService,
     MatDatepickerModule,
     TopPlayersForCrimeService,
-    TopTeamsForCrimeService
+    TopTeamsForCrimeService,
+    CrimeTimeLineService
   ],
   bootstrap: [AppComponent]
 })

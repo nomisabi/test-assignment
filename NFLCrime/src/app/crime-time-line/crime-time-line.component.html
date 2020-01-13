@@ -1,0 +1,17 @@
+<h2>Crime Timeline</h2>
+
+<div>
+    Select an option
+  </div>
+  <mat-form-field>
+      <mat-select [(value)]="selected">
+        <mat-option (click)="select()" *ngFor="let crime of crimes" [value]="crime">
+          {{crime.Category}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    
+<div *ngIf="chart">
+    <canvas id="canvas">{{ chart }}</canvas>
+  </div>

@@ -36,8 +36,8 @@ export class TopPlayersComponent implements OnInit {
     this.playerService.getTopPlayersForCrime(this.selected.Category).then(
       res=> this.dataSource=res
     )
-    this.smaller=NaN
-    this.bigger=NaN
+    this.smaller=null
+    this.bigger=null
   }
 
   filterBigger(){

@@ -25,7 +25,13 @@ I coded HTML for the components with Material Table and Select.
 In Top Crimes, I call the service in ngOnInit to get all of the top crimes. In the other two, first I call the the service in ngOnInit to get all of the top crimes,
 and when one of the crime is selected, then it called the service to get the top players and teams.
 
- Step 4 - Add filter functionality to the components
+Step 4 - Add filter functionality to the components
 
- Added arrest_count bigger and smaller functions to the components. In Top Player, I coded the filter in component with loop,
- Top Teams and Crimes with smallerFilter and bigger Filter pipes.
+Added arrest_count bigger and smaller functions to the components. In Top Player, I coded the filter in component with loop,
+Top Teams and Crimes with smallerFilter and bigger Filter pipes.
+
+Step 5 - Visualize Crime Timeline
+
+I installed chart.js. Then created a serviced with a function getting the timeline for a crime. 
+After I generated a component, where first you have to select the crime, then it shows the chart. 
+I used line chart for it.
