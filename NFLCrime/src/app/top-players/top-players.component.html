@@ -1,0 +1,35 @@
+<h2> Top Players For Crime </h2>
+
+<div>
+  Select an option
+</div>
+<mat-form-field>
+    <mat-select [(value)]="selected">
+      <mat-option (click)="select()" *ngFor="let crime of crimes" [value]="crime">
+        {{crime.Category}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+
+  <div></div>
+  <div></div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+    </ng-container>
+  
+    <!-- Arrest Count Column -->
+    <ng-container matColumnDef="arrest_count">
+      <th mat-header-cell *matHeaderCellDef> arrest_count </th>
+      <td mat-cell *matCellDef="let element"> {{element.arrest_count}} </td>
+    </ng-container>
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

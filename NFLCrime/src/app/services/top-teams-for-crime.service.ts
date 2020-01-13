@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TopTeamsForCrimeService {
 
-  private api="http://nflarrest.com/api/v1/crimes/topTeams/"
+  private api="http://nflarrest.com/api/v1/crime/topTeams/"
 
   constructor(private http: HttpClient) {
   }

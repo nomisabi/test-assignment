@@ -17,3 +17,10 @@ Angular: 8.2.14
 
 I created the services, added an error hadling function and a function to get values with Http requests.
 
+3. Add components to show data from services
+
+Deleted some parts of the basic HTML app and added navigation to it. I created the three components, 
+and paths to these components in routing file. I installed Material. I created interfaces for crimes, teams and players.
+I coded HTML for the components with Material Table and Select.
+In Top Crimes, I call the service in ngOnInit to get all of the top crimes. In the other two, first I call the the service in ngOnInit to get all of the top crimes,
+and when one of the crime is selected, then it called the service to get the top players and teams.
