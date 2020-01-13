@@ -11,6 +11,7 @@ export class TopTeamsForCrimeService {
   constructor(private http: HttpClient) {
   }
 
+  //getting the top teams for a crime by crime id
   getTopTeamsForCrime(crimeID:string){
     return this.http.get(this.api+crimeID)
     .toPromise()
@@ -18,6 +19,7 @@ export class TopTeamsForCrimeService {
     .catch(this.handleError);
   }
 
+  // error handling
   private handleError(error: any): Promise<any> {
     console.error("Error... ", error);
     return Promise.reject(error.message || error);
